@@ -1,0 +1,37 @@
+What is a Lambda Expression?
+A lambda expression is a short way to write a method.
+1. Has no name
+2. Is used only once
+3. Works with functional interfaces
+
+Lambda Syntax
+(parameters) -> { body }
+
+In lambda expressions, return is required only when the body uses curly braces {}.
+For single-line expressions without braces, return is implicit.
+
+n -> n * n
+n -> { return n * n; }
+
+
+Note: Write logic directly, without creating a full class or method.
+
+Why Java Introduced Lambda (Problem Before Java 8)
+
+Runnable r = new Runnable() {
+    @Override
+    public void run() {
+        System.out.println("Hello");
+    }
+};
+
+Problems:
+Too many lines
+Extra class
+Hard to read
+
+Lambda Way (Java 8)
+
+Runnable r = () -> {
+    System.out.println("Hello");
+};
